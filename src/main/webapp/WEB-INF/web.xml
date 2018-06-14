@@ -19,7 +19,7 @@
     </servlet-mapping>
     
     <!-- 使用配置文档的拦截器 -->
-    <servlet>  
+    <!-- <servlet>  
     <servlet-name>springMVC</servlet-name>  
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  
     <init-param>  
@@ -31,6 +31,6 @@
 	<servlet-mapping>  
 	    <servlet-name>springMVC</servlet-name>  
 	    <url-pattern>/</url-pattern>  
-	</servlet-mapping>  
+	</servlet-mapping>   -->
 
 </web-app>
