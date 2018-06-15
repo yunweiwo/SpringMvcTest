@@ -3,34 +3,20 @@
 	xmlns="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	version="3.0">
-	
-	
-	<!-- DispatcherServlet是前置控制器，配置在web.xml文件中的,拦截匹配的请求 -->
-	<servlet>  
-        <servlet-name>example</servlet-name>  
-        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        <!-- 拦截器的启动顺序1、与容器一起启动 --> 
-        <load-on-startup>1</load-on-startup>  
-    </servlet>  
-    <!-- 拦截所有.form结尾的请求 -->
-    <servlet-mapping>  
-        <servlet-name>example</servlet-name>  
-        <url-pattern>*.form</url-pattern>  
-    </servlet-mapping>
-    
+
     <!-- 使用配置文档的拦截器 -->
-    <!-- <servlet>  
+    <servlet>  
     <servlet-name>springMVC</servlet-name>  
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  
     <init-param>  
         <param-name>contextConfigLocation</param-name>  
-        <param-value>classpath:spring-mvc.xml</param-value>  
+        <param-value>classpath*:Spring-MVC.xml</param-value>  
     </init-param>  
     <load-on-startup>1</load-on-startup>  
 	</servlet>  
 	<servlet-mapping>  
 	    <servlet-name>springMVC</servlet-name>  
-	    <url-pattern>/</url-pattern>  
-	</servlet-mapping>   -->
+	    <url-pattern>/*.do</url-pattern>  
+	</servlet-mapping> 
 
 </web-app>
